@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <!--For Owl Carousol-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--For Bootstrap-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+     <!--FontIcon-->
+     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    <style>
+        
+        body {
+            background-color: rgb(49, 49, 74);
+            color: aliceblue;
+        }
+        
+
+        /*Header Style*/
+        ul {
+            margin-top: 0%;
+            width: 100%;
+            text-decoration: none;
+            display: inline-block;
+            list-style-type: none;
+            background-color: rgb(35, 38, 48);
+        }
+
+        #Logo{
+            padding-right: 400px;
+        }
+
+        .header {
+        float: left;
+        vertical-align: middle;
+        }
+
+        .header a {
+        font-size: 25px;
+        display: block;
+        color: rgb(179, 173, 173);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        
+        }
+        
+
+        .header a:hover {
+            
+            color: aliceblue;
+        }
+
+        #logsign{
+            padding-left: 200px;
+        }
+
+
+         
+          /* DropDown Style */
+          .dropbtn {
+            background-color: rgb(35, 38, 48);
+            color: rgb(179, 173, 173);
+            padding: 16px;
+            font-size: 25px;
+            padding-top: 13px;
+            border: none;
+            cursor: pointer;
+            }
+
+            .dropdown {
+            position: relative;
+            display: inline-block;
+            }
+
+            .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(27, 27, 29);
+            min-width: 100px;
+            margin-left: 0px;
+
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .dropdown-content a {
+            color: rgb(179, 173, 173);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 20px;
+            }
+
+            .dropdown-content a:hover {
+            color: aliceblue;
+            
+            }
+
+            .dropdown:hover .dropdown-content {
+            display: block;
+            
+            }
+
+            .dropdown:hover .dropbtn {
+            color: aliceblue;
+            
+            }
+
+
+           /*Main Body Style*/
+           #MainBody{
+            
+            margin-left: 7%;
+            margin-right: 7%;
+        } 
+
+        .ViewAll{
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            color: rgb(232, 223, 223) ;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 2px;
+            
+        }
+
+
+        .item a img{
+            height: 240px;
+            width: 40px;
+        }
+
+        .item a {
+            text-decoration: none;
+            color: rgb(232, 223, 223);
+            
+        }
+
+        
+
+        #RankingImg img{
+            border-radius: 13px;
+            height: 300px;
+            width: 200px;
+        }
+
+        #Description{
+           background-color: rgb(39, 38, 58);
+            padding-top: 10px;
+            border-radius: 10px;
+        }
+           
+           
+           
+
+
+        /* Footer Style */
+
+        .footer{
+            background-color: rgb(35, 38, 48);
+            color: rgb(179, 173, 173);
+            width: 100%;   
+        }
+
+        .row{
+            margin-left: 7%;
+            margin-right: 7%;
+        }
+
+        .row a{
+            text-decoration: none;
+
+        }
+
+        .row a:hover{
+            color: aliceblue;
+        }
+
+        #fi{
+            font-size: 20px;
+            padding-right: 3px;
+        }
+
+
+
+        
+
+    </style>
+
+</head>
+
+<body>
+    
+    <!--header-->
+    <ul>
+        <li class="header"><a href="Home.html" id="Logo" ><img src="HLogo.jpg" height="33px" width="27px"></a></li>
+        <li class="header"><a href="Home.html" >Home</a></li>
+        <li class="header"><a href="Profile.html" >Profile</a></li>
+        <li class="header"><div class="dropdown">
+            <button class="dropbtn">Explore</button>
+            <div class="dropdown-content">
+            <a href="TopRanked.html">Top Ranked</a>
+            <a href="Trending.html">Trending</a>
+            </div>
+          </div></li>
+        <li class="header"><a href="About.html" >About</a></li>
+        <li class="header" id="logsign"><a href="Login.html" >LogIn</a></li>
+        <li class="header"><a href="SignUp.html" >SignUp</a></li>
+      </ul><br><br>
+
+
+
+      <!--<Main Body>-->
+     <div id="MainBody">
+        <h1 style="text-align: center;">Welcome To WeebsHeaven, <b>Username</b></h1><br>
+
+
+        <h3><b>Favourite</b></h3>
+        <br><br>
+        
+        <div class="owl-carousel owl-theme" id="owl">
+            <div class="item">
+                <a href="Details.html"><img src="DBZ.png"><br>Dragon Ball Z</a>
+            </div>
+           
+            <div class="item">
+                <a href="Details.html"><img src="One.jpg"><br>One Piece</a>
+            </div>
+            <div class="item">
+                <a href="Details.html"><img src="Komi.jpg"><br>Komi Cant Communicate</a>
+            </div>
+            <div class="item">
+                <a href="Details.html"><img src="FAMB.jpg"><br>Full Metal Alchemist Brotherhood</a>
+            </div>
+            <div class="item">
+                <a href="Details.html"><img src="Spy.png"><br>Spy X Family</a>
+            </div>
+            <div class="item">
+                <a href="Details.html"><img src="Shield.jpg"><br>Rise of Shield Hero</a>
+            </div>
+            <div class="item">
+                <a href="Details.html"><img src="Shikimori.jpg"><br>Shikimori is just not cute</a>
+            </div>
+            
+            
+        </div>
+
+
+
+
+
+                <!--For Carosel-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="text/javascript">
+        $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:30,
+        responsiveClass:false,
+        dots: false,
+        stagePadding:0,
+        responsive:{
+            0:{
+                items:1,
+                nav:true
+            },
+            600:{
+                items:4,
+                nav:false
+            },
+            1000:{
+                items:6,
+                nav:true,
+                loop:false
+            }
+        }
+        })</script>
+
+
+
+
+
+
+
+
+
+        <h3><b>Recommendation based on genre</b></h3><br>
+        <div>
+        <ol>
+            <li>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4" id="RankingImg">
+                            <a href="DetailsDBZ.html"><img src="DBZ.png"></a>
+                        </div>
+                        <div class="col" id="Description">
+                            <h3><b>Dragon Ball Z</b></h3><br>
+                            <p><b>Aired: </b> 1989</p>
+                            <p><b>Total Episode: </b> 291</p>
+                            <p><b>Description:</b> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+<br>
+            <li>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4" id="RankingImg">
+                            <a href="Details.html"><img src="One.jpg"></a>
+                        </div>
+                        <div class="col" id="Description">
+                            <h3><b>One Piece</b></h3><br>
+                            <p><b>Aired: </b> 1998</p>
+                            <p><b>Total Episode: </b> 1050</p>
+                            <p><b>Description:</b> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4" id="RankingImg">
+                            <a href="Details.html"><img src="Komi.jpg"></a>
+                        </div>
+                        <div class="col" id="Description">
+                            <h3><b>Komi Cant Communicate</b></h3><br>
+                            <p><b>Aired: </b> 2022</p>
+                            <p><b>Total Episode: </b> 12</p>
+                            <p><b>Description:</b> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+<br>
+            <li>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4" id="RankingImg">
+                            <a href="Details.html"><img src="FAMB.jpg"></a>
+                        </div>
+                        <div class="col" id="Description">
+                            <h3><b>Full Metal Alchemist Brotherhood</b></h3><br>
+                            <p><b>Aired: </b> 2011</p>
+                            <p><b>Total Episode: </b> 64</p>
+                            <p><b>Description:</b> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4" id="RankingImg">
+                            <a href="Details.html"><img src="Spy.png"></a>
+                        </div>
+                        <div class="col" id="Description">
+                            <h3><b>Spy x Family</b></h3><br>
+                            <p><b>Aired: </b> 2022</p>
+                            <p><b>Total Episode: </b> 13</p>
+                            <p><b>Description:</b> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+<br>
+            <li>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4" id="RankingImg">
+                            <a href="Details.html"><img src="Shield.jpg"></a>
+                        </div>
+                        <div class="col" id="Description">
+                            <h3><b>Rise of Shield Hero</b></h3><br>
+                            <p><b>Aired: </b> 2022</p>
+                            <p><b>Total Episode: </b> 12</p>
+                            <p><b>Description:</b> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4" id="RankingImg">
+                            <a href="Details.html"><img src="Shikimori.jpg"></a>
+                        </div>
+                        <div class="col" id="Description">
+                            <h3><b>Shikimori is just not cute</b></h3><br>
+                            <p><b>Aired: </b> 2022</p>
+                            <p><b>Total Episode: </b> 24</p>
+                            <p><b>Description:</b> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+<br>
+            <li>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4" id="RankingImg">
+                            <a href="Details.html"><img src="Jobless.jpg"></a>
+                        </div>
+                        <div class="col" id="Description">
+                            <h3><b>Jobless Reincarnation</b></h3><br>
+                            <p><b>Aired: </b> 2021</p>
+                            <p><b>Total Episode: </b> 24</p>
+                            <p><b>Description:</b> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4" id="RankingImg">
+                            <a href="Details.html"><img src="Love.png"></a>
+                        </div>
+                        <div class="col" id="Description">
+                            <h3><b>Love is War</b></h3><br>
+                            <p><b>Aired: </b> 2022</p>
+                            <p><b>Total Episode: </b> 12</p>
+                            <p><b>Description:</b> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4" id="RankingImg">
+                            <a href="Details.html"><img src="Trapped.jpg"></a>
+                        </div>
+                        <div class="col" id="Description">
+                            <h3><b>Trapped in a Otome Game</b></h3><br>
+                            <p><b>Aired: </b> 2022</p>
+                            <p><b>Total Episode: </b> 13</p>
+                            <p><b>Description:</b> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <br>
+            
+            
+
+        </ol>
+    </div>
+
+
+
+
+    <h3><b>Recommendation based on Favourite</b></h3><br>
+        <div>
+        <ol>
+            <li>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4" id="RankingImg">
+                            <a href="DetailsDBZ.html"><img src="DBZ.png"></a>
+                        </div>
+                        <div class="col" id="Description">
+                            <h3><b>Dragon Ball Z</b></h3><br>
+                            <p><b>Aired: </b> 1989</p>
+                            <p><b>Total Episode: </b> 291</p>
+                            <p><b>Description:</b> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+<br>
+            <li>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4" id="RankingImg">
+                            <a href="Details.html"><img src="One.jpg"></a>
+                        </div>
+                        <div class="col" id="Description">
+                            <h3><b>One Piece</b></h3><br>
+                            <p><b>Aired: </b> 1998</p>
+                            <p><b>Total Episode: </b> 1050</p>
+                            <p><b>Description:</b> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4" id="RankingImg">
+                            <a href="Details.html"><img src="Komi.jpg"></a>
+                        </div>
+                        <div class="col" id="Description">
+                            <h3><b>Komi Cant Communicate</b></h3><br>
+                            <p><b>Aired: </b> 2022</p>
+                            <p><b>Total Episode: </b> 12</p>
+                            <p><b>Description:</b> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+<br>
+            <li>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4" id="RankingImg">
+                            <a href="Details.html"><img src="FAMB.jpg"></a>
+                        </div>
+                        <div class="col" id="Description">
+                            <h3><b>Full Metal Alchemist Brotherhood</b></h3><br>
+                            <p><b>Aired: </b> 2011</p>
+                            <p><b>Total Episode: </b> 64</p>
+                            <p><b>Description:</b> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4" id="RankingImg">
+                            <a href="Details.html"><img src="Spy.png"></a>
+                        </div>
+                        <div class="col" id="Description">
+                            <h3><b>Spy x Family</b></h3><br>
+                            <p><b>Aired: </b> 2022</p>
+                            <p><b>Total Episode: </b> 13</p>
+                            <p><b>Description:</b> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+<br>
+            <li>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4" id="RankingImg">
+                            <a href="Details.html"><img src="Shield.jpg"></a>
+                        </div>
+                        <div class="col" id="Description">
+                            <h3><b>Rise of Shield Hero</b></h3><br>
+                            <p><b>Aired: </b> 2022</p>
+                            <p><b>Total Episode: </b> 12</p>
+                            <p><b>Description:</b> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4" id="RankingImg">
+                            <a href="Details.html"><img src="Shikimori.jpg"></a>
+                        </div>
+                        <div class="col" id="Description">
+                            <h3><b>Shikimori is just not cute</b></h3><br>
+                            <p><b>Aired: </b> 2022</p>
+                            <p><b>Total Episode: </b> 24</p>
+                            <p><b>Description:</b> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+<br>
+            <li>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4" id="RankingImg">
+                            <a href="Details.html"><img src="Jobless.jpg"></a>
+                        </div>
+                        <div class="col" id="Description">
+                            <h3><b>Jobless Reincarnation</b></h3><br>
+                            <p><b>Aired: </b> 2021</p>
+                            <p><b>Total Episode: </b> 24</p>
+                            <p><b>Description:</b> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4" id="RankingImg">
+                            <a href="Details.html"><img src="Love.png"></a>
+                        </div>
+                        <div class="col" id="Description">
+                            <h3><b>Love is War</b></h3><br>
+                            <p><b>Aired: </b> 2022</p>
+                            <p><b>Total Episode: </b> 12</p>
+                            <p><b>Description:</b> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <br>
+            <li>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4" id="RankingImg">
+                            <a href="Details.html"><img src="Trapped.jpg"></a>
+                        </div>
+                        <div class="col" id="Description">
+                            <h3><b>Trapped in a Otome Game</b></h3><br>
+                            <p><b>Aired: </b> 2022</p>
+                            <p><b>Total Episode: </b> 13</p>
+                            <p><b>Description:</b> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <br>
+            
+            
+
+        </ol>
+    </div>
+
+     </div>
+<br><br>
+    
+      <!--Footer-->
+
+<div class="footer"><br>
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>CUSTOMER SERVICE</h3>
+                  <a href="#" target="_blank"><b>>></b>Your Account</a><br>
+                  <a href="#" target="_blank"><b>>></b>Your Contact</a><br>
+                  <a href="#" target="_blank"><b>>></b>Gift Cards</a>
+
+        </div>
+        <div class="col-sm-4">
+            <h3>CUSTOMER SERVICE</h3>
+                  <a href="#" target="_blank"><b>>></b>Your Account</a><br>
+                  <a href="#" target="_blank"><b>>></b>Your Contact</a><br>
+                  <a href="#" target="_blank"><b>>></b>Gift Cards</a>
+        </div>
+        <div class="col-sm-4">
+            <h3>Contact us</h3>
+                  
+                    <p id="fi">WeebsHeaven@gamil.com</p>
+                    <a href="#" target="_blank"><i class="fa fa-facebook-f" id="fi" > </i></a>
+                    <a href="#" target="_blank"><i class="fa fa-instagram" id="fi" > </i></a>
+        </div>
+      </div>
+      <br><br>
+</div>
+
+</body>
+</html>
